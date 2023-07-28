@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 void findZigZagSequence(vector < int > a, int n){

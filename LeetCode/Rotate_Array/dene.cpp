@@ -1,0 +1,27 @@
+#include <vector>
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void rotate(vector<int>& nums, int k)
+{
+    int nums_size = nums.size();
+    k = k % nums_size;
+    
+    // Önce tüm diziyi ters çevir
+    reverse(nums.begin(), nums.end());
+    
+    // Sonra k adım sağa doğru kaydır
+    reverse(nums.begin(), nums.begin() + k);
+    reverse(nums.begin() + k, nums.end());
+	for (int m : nums)
+	std::cout << m << " ";
+}
+
+int main()
+{
+		vector<int> vector1 = {1, 2, 3, 4, 5, 6};
+		rotate(vector1, 3);
+}

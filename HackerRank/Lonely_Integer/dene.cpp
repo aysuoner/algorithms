@@ -5,7 +5,8 @@
 
 using namespace std;
 
-int lonelyinteger(std::vector<int>& arr) {
+int lonelyinteger(std::vector<int>& arr)
+{
     int uniqueElement = 0;
     for (int num : arr) {
         uniqueElement ^= num;

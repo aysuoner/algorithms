@@ -5,8 +5,8 @@
 
 using namespace std;
 
- void selectionSort(vector<int>& arr, int size)
- {
+void selectionSort(vector<int>& arr, int size)
+{
 	int min;
 	for(int i = 0; i < size - 1; i++)
 	{
@@ -24,7 +24,7 @@ using namespace std;
 		}
 		cout << endl;
 	}
- }
+}
 
 int main()
 {

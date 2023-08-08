@@ -7,9 +7,10 @@ using namespace std;
 
 void insertionSort2(int n, vector<int> arr)
 {
-    int prev = 1, count = 1;
+    int prev;
 	int curr;
-    while (n > 1)
+	int count = 1;
+    while (count < n)
     {
         prev = count - 1;
 		curr = count;
@@ -23,7 +24,7 @@ void insertionSort2(int n, vector<int> arr)
             prev--;
         }
         count++;
-        n--;
+
         for (int m: arr)
         {
             std::cout << m << " " ;

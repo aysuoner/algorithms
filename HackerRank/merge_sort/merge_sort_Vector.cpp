@@ -34,7 +34,6 @@ vector<int> merge(vector <int> &left_arr, vector <int> &right_arr)
 		merge_arr.push_back(right_arr[k]);
 		k++;	
 	}
-	left_arr.clear();
 	left_arr.shrink_to_fit();
 	right_arr.clear();
 	right_arr.shrink_to_fit();

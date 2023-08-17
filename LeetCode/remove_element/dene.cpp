@@ -10,12 +10,12 @@ using namespace std;
 	int k = 0;
 	int rep = 0;
 	int len = nums.size() - 1;
-	while (i <= len - rep)
+	while (i <= len - rep) // TC O(len - rep)
 	{
 		if (nums[i] == val)
 		{
 			k = i;
-			while (k < len - rep)
+			while (k < len - rep) // TC O(len - rep)
 			{
 				swap(nums[k], nums[k + 1]);
 				k++;
@@ -25,19 +25,15 @@ using namespace std;
 		else
 			i++;
 	}
-	while (rep > 0)
-	{
-		nums.pop_back();
-		rep--;
-	}
-	return nums.size();
-}
+	return len - rep + 1;
+} RESSSS TC = O ((len-rep)*(len-rep)) = O (n^2)
+//SC O(1);
  */
 
 int removeElement(vector<int>& nums, int val)
 {
     int j=0;
-    for(int i=0; i<nums.size(); i++)
+    for (int i=0; i<nums.size(); i++) //TC O(nums.size()) //SC O(1);
 	{
         if(nums[i]!=val)
 		{
@@ -47,7 +43,6 @@ int removeElement(vector<int>& nums, int val)
     }
     return j;
 }
-
 
 int main()
 {
